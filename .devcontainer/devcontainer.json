@@ -17,13 +17,22 @@
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
+			"settings": {
+				"editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+				"editor.formatOnSave": true,
+				"editor.codeActionsOnSave": {
+					"source.addMissingImports": true,
+					"source.fixAll": true
+				}
+			},
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"dbaeumer.vscode-eslint",
 				"GitHub.copilot",
 				"dsznajder.es7-react-js-snippets",
 				"streetsidesoftware.code-spell-checker",
-				"genieai.chatgpt-vscode"
+				"genieai.chatgpt-vscode",
+				"rvest.vs-code-prettier-eslint"
 			]
 		}
 	},
