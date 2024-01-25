@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
+
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Image from 'next/image';
+
+import RecoilProvider from './recoilProvider'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Image src="/back.jpg" layout="fill" objectFit="cover" alt="back" style={{ opacity: 0.5, zIndex: -1 }} />
+          <RecoilProvider>{children}</RecoilProvider>
+      </body>
     </html>
   );
 }
